@@ -1,0 +1,19 @@
+GEMINI_API_KEY=placeholder
+NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY=
+NEXT_PUBLIC_SUPABASE_URL=
+# NODE_ENV=production
+VITE_SUPABASE_ANON_KEY=
+VITE_SUPABASE_URL=
+
+# Resend API Configuration (Primary for free hosting tiers)
+# 1. RESEND_API_KEY = The API key generated at https://resend.com (begins with re_)
+RESEND_API_KEY=
+
+# Gmail SMTP Configuration (Fallback / Alternative for paid tiers or local testing)
+# 1. GMAIL_USER = The Gmail address that SENDS the fallback order emails
+# 2. GMAIL_APP_PASSWORD = The 16-char App Password from https://myaccount.google.com/apppasswords
+GMAIL_USER=
+GMAIL_APP_PASSWORD=
+
+# Shared Seller Notification Target
+SELLER_EMAIL=
