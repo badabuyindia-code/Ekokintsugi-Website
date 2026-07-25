@@ -598,10 +598,34 @@ app.post("/api/orders/checkout", async (req, res) => {
    
 
     // ─── Email Dispatch ─────────────────────────────────────────────
+    
     const senderAddr = emailSenderAddress;
     const recipientAddr = sellerEmailAddress;
     const timestamp = new Date().toLocaleString();
     const trackingNumber = `EK-${Math.floor(100000 + Math.random() * 900000)}`;
+    // ─── Save Order to Supabase (for tracking & Excel export) ────────
+    if (supabase) {
+      try {
+        await supabase.from("prebooking_orders").insert({
+          tracking_number: trackingNumber,
+          customer_name: shippingDetails.name,
+          customer_email: shippingDetails.email,
+          delivery_address: shippingDetails.address,
+          delivery_notes: shippingDetails.notes || null,
+          items: items.map((item: any) => ({
+            name: item.product.name,
+            quantity: item.quantity,
+            size: item.selectedSize || "One Size"
+          })),
+          co2_saved_kg: totalCo2Saved,
+          waste_diverted_kg: totalWasteReclaimed,
+          status: "New"
+        });
+        console.log(`✅ Prebooking order saved to Supabase: ${trackingNumber}`);
+      } catch (err: any) {
+        console.error(`⚠️ Could not save prebooking order to Supabase: ${err.message}`);
+      }
+    }
 
     const itemsSummaryList = items
       .map(item => `• ${item.product.name} (Size: ${item.selectedSize || "One Size"}) (Qty: ${item.quantity}) - Category: ${item.product.category || "General"}`)
