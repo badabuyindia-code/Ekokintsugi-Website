@@ -47,9 +47,9 @@ const isGmailConfigured = Boolean(gmailUser && gmailAppPassword && !gmailUser.in
 
 const mailTransporter = isGmailConfigured
   ? nodemailer.createTransport({
-      host: "smtp.gmail.com",
-      port: 587,
-      secure: false, // Set to false for port 587 (upgrades automatically via STARTTLS)
+    host: "smtp.hostinger.com",
+     port: 465,
+      secure: true,
       auth: {
         user: gmailUser,
         pass: gmailAppPassword,
@@ -595,6 +595,25 @@ app.post("/api/orders/checkout", async (req, res) => {
         // silent bypass
       }
     }
+    // ─── Thank You Email to Customer ─────────────────────────────────
+if (mailTransporter) {
+  try {
+    await mailTransporter.sendMail({
+      from: `"EkoKintsugi" <${gmailUser}>`,
+      to: shippingDetails.email,
+      subject: `Thank you for your prebooking - EkoKintsugi [${trackingNumber}]`,
+      text: `Hi ${shippingDetails.name},\n\nThank you for your prebooking! Our team will reach out to you soon.\n\nOrder Reference: ${trackingNumber}\n\n- EkoKintsugi Team`,
+      html: `<div style="font-family:Arial,sans-serif;max-width:500px;margin:0 auto;padding:24px;border:2px solid #1B4332;border-radius:12px">
+        <h2 style="color:#1B4332">Thank you, ${shippingDetails.name}!</h2>
+        <p>Thank you for your prebooking with EkoKintsugi. Our team will reach out to you soon.</p>
+        <p style="color:#888;font-size:13px">Order Reference: ${trackingNumber}</p>
+      </div>`
+    });
+    console.log(`✅ Thank-you email sent to customer: ${shippingDetails.email}`);
+  } catch (err: any) {
+    console.error(`⚠️ Could not send thank-you email to customer: ${err.message}`);
+  }
+}
 
     // ─── Email Dispatch ─────────────────────────────────────────────
     const senderAddr = emailSenderAddress;
