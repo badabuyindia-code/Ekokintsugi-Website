@@ -204,6 +204,10 @@ function escapeHtml(value: string) {
 
 app.use(cors());
 app.use(express.json());
+// Explicitly serve the Eko chatbot widget file directly (before any catch-all routing)
+app.get("/eko-chatbot.html", (req, res) => {
+  res.sendFile(path.join(process.cwd(), "dist", "eko-chatbot.html"));
+});
 
 type ImpactRecord = {
   id: string;
