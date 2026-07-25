@@ -26,5 +26,14 @@
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
+ <!-- Eko Chatbot Widget -->
+<button id="eko-chat-toggle" style="position:fixed;bottom:20px;right:20px;width:60px;height:60px;border-radius:50%;background:#C89B4C;border:none;box-shadow:0 8px 20px rgba(0,0,0,0.3);cursor:pointer;z-index:9999;font-size:26px;">💬</button>
+<iframe id="eko-chat-frame" src="/eko-chatbot.html" style="display:none;position:fixed;bottom:90px;right:20px;width:380px;height:600px;max-height:80vh;border:none;border-radius:20px;box-shadow:0 20px 50px rgba(0,0,0,0.4);z-index:9999;"></iframe>
+<script>
+  document.getElementById('eko-chat-toggle').addEventListener('click', function () {
+    var frame = document.getElementById('eko-chat-frame');
+    frame.style.display = (frame.style.display === 'none' || frame.style.display === '') ? 'block' : 'none';
+  });
+</script>
   </body>
 </html>
