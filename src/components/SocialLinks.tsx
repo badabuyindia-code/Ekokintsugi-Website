@@ -36,7 +36,7 @@ export default function SocialLinks({ className = "" }: { className?: string }) 
   return (
     <div className={`flex items-center gap-3 ${className}`}>
       {SOCIAL_LINKS.map(({ name, href, Icon }) => (
-        
+        <a
           key={name}
           href={href}
           target="_blank"
