@@ -1127,9 +1127,9 @@ function getSizesForCategory(category: string): string[] {
   if (cat.includes("men's footwear") || cat.includes("mens footwear")) {
     return ["40", "41", "42", "43", "44", "45", "46", "47"];
   }
-  if (cat.includes("women's footwear") || cat.includes("womens footwear")) {
-    return ["36", "37", "38", "39", "40", "41", "42"];
-  }
+if (cat.includes("women's footwear") || cat.includes("womens footwear")) {
+  return ["36", "37", "38", "39", "40", "41"];
+}
   if (cat.includes("jackets")) {
     return ["S", "M", "L", "XL"];
   }
