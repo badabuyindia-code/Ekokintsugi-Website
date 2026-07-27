@@ -1,6 +1,7 @@
 import { Link, useNavigate } from "react-router-dom";
 import { PRODUCT_CATEGORIES } from "../lib/productCatalog";
 import { useLanguage } from "../lib/LanguageContext";
+import SocialLinks from "./SocialLinks";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -17,9 +18,10 @@ export default function Footer() {
                 <img src="/logo_eko.png" alt="EkoKintsugi Logo" className="h-12 sm:h-14 w-auto" />
               </span>
             </div>
-            <p className="text-muted-foreground text-base sm:text-lg max-w-sm leading-relaxed">
+          <p className="text-muted-foreground text-base sm:text-lg max-w-sm leading-relaxed">
               {t("footer.tagline")}
             </p>
+            <SocialLinks className="mt-6" />
           </div>
 
           <div>
