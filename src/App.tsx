@@ -20,6 +20,7 @@ import AuthPage from "./pages/AuthPage";
 import { CartProvider } from "./lib/CartContext";
 import CartDrawer from "./components/CartDrawer";
 import FloatingSocialLinks from "./components/FloatingSocialLinks";
+import PrebookingButton from "./components/PrebookingButton";
 import ProductDetailPage from "./pages/ProductDetailPage";
 import AccountPage from "./pages/AccountPage";
 
@@ -80,6 +81,7 @@ function AppShell() {
         <ImpactDashboard isOpen={isImpactOpen} onClose={closeImpactDashboard} />
         <CartDrawer />
         <FloatingSocialLinks />
+        <PrebookingButton />
       </div>
     </>
   );
