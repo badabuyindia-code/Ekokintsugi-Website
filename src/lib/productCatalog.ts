@@ -94,10 +94,10 @@ export const PRODUCT_CATEGORIES: ProductCategory[] = [
   },
   {
     slug: "accessories",
-    title: "Accessories & Small Goods",
-    shortTitle: "Accessories",
-    eyebrow: "Artisanal Accents",
-    description: "Refined evening clutches, card wraps, keychains, and small goods built from precise material offcuts.",
+  title: "Key Chain",
+  shortTitle: "Key Chain",
+  eyebrow: "Artisanal Accents",
+  description: "Premium handcrafted key chains made from circular leather.",
     image: "https://adykwrunnuwgwmbzfsxj.supabase.co/storage/v1/object/public/product-images/Ekokintsugi-Products_categorywise/CLUTCHES/1.png",
     categoryLabels: ["accessories", "accessory", "clutches", "clutch", "keychains", "keychain", "accessories & small goods"],
     queryTerms: ["accessory", "accessories", "clutch", "clutches", "keychain", "keychains", "luggage tag", "charm", "fob"]
