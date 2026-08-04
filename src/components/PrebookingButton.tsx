@@ -1,4 +1,5 @@
 import { useState, type FormEvent } from "react";
+import { supabase, isSupabaseConfigured } from "../lib/supabase";
 
 function CalendarIcon({ className }: { className?: string }) {
   return (
@@ -28,18 +29,41 @@ function CloseIcon({ className }: { className?: string }) {
 export default function PrebookingButton() {
   const [isOpen, setIsOpen] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [error, setError] = useState<string | null>(null);
   const [form, setForm] = useState({ name: "", phone: "", email: "", product: "", notes: "" });
 
   const close = () => {
     setIsOpen(false);
     setIsSubmitted(false);
+    setError(null);
     setForm({ name: "", phone: "", email: "", product: "", notes: "" });
   };
 
-  const handleSubmit = (e: FormEvent) => {
+  const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
-    // TODO: wire this up to your backend / email service / Supabase table.
-    // For now this just confirms the request was captured on the client.
+    setError(null);
+
+    if (!isSupabaseConfigured || !supabase) {
+      setError("Booking is temporarily unavailable. Please reach out via WhatsApp instead.");
+      return;
+    }
+
+    setIsSubmitting(true);
+    const { error: insertError } = await supabase.from("prebookings").insert({
+      name: form.name,
+      phone: form.phone,
+      email: form.email || null,
+      product: form.product || null,
+      notes: form.notes || null
+    });
+    setIsSubmitting(false);
+
+    if (insertError) {
+      setError("Something went wrong submitting your request. Please try again or contact us via WhatsApp.");
+      return;
+    }
+
     setIsSubmitted(true);
   };
 
@@ -162,11 +186,18 @@ export default function PrebookingButton() {
                     />
                   </div>
 
+                  {error && (
+                    <p className="text-sm text-red-500" role="alert">
+                      {error}
+                    </p>
+                  )}
+
                   <button
                     type="submit"
-                    className="w-full rounded-full bg-primary text-primary-foreground font-medium py-2.5 hover:bg-accent hover:text-accent-foreground transition-colors cursor-pointer"
+                    disabled={isSubmitting}
+                    className="w-full rounded-full bg-primary text-primary-foreground font-medium py-2.5 hover:bg-accent hover:text-accent-foreground transition-colors cursor-pointer disabled:opacity-60 disabled:cursor-not-allowed"
                   >
-                    Confirm Prebooking
+                    {isSubmitting ? "Submitting…" : "Confirm Prebooking"}
                   </button>
                 </form>
               </>
