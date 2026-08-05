@@ -23,6 +23,7 @@ import FloatingSocialLinks from "./components/FloatingSocialLinks";
 import PrebookingButton from "./components/PrebookingButton";
 import ProductDetailPage from "./pages/ProductDetailPage";
 import AccountPage from "./pages/AccountPage";
+import PrebookingBanner from "./components/PrebookingBanner";
 
 function AppShell() {
   const location = useLocation();
