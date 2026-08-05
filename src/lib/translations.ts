@@ -127,7 +127,7 @@ export const translations: Record<"en" | "de", Record<string, string>> = {
     "process.lower_rejection": "Lower Rejection",
 
     // Process Steps
-    "step1.loc": "Jharkhand Processing Unit",
+    "step1.loc": "Waste Processing Unit",
     "step1.title": "Collection & Sorting",
     "step1.desc": "AI-powered material intelligence identifies and sorts waste materials for maximum quality and efficiency",
     "step2.loc": "AI Quality Lab",
@@ -171,7 +171,7 @@ export const translations: Record<"en" | "de", Record<string, string>> = {
     // Impact Page
     "impactpage.badge": "Traceability & circularity",
     "impactpage.title": "Our ESG Impact",
-    "impactpage.subtitle": "From local waste diversion in Jharkhand & UP to verified global ESG footprints. Discover our circular paradigm.",
+    "impactpage.subtitle": "From local waste diversion in UP to verified global ESG footprints. Discover our circular paradigm.",
     "impactpage.loop.title": "Our Zero-Waste Loop",
     "impactpage.loop.desc": "EkoKintsugi redirects textile waste, plastic discards, and footwear scraps away from overflowing landfill basins directly into our high-performance circular materials pipeline.",
     "impactpage.loop.item1": "• 100% Traceable Sourcing",
@@ -485,7 +485,7 @@ export const translations: Record<"en" | "de", Record<string, string>> = {
     "process.lower_rejection": "Geringere Ausschussrate",
 
     // Process Steps
-    "step1.loc": "Verarbeitungseinheit Jharkhand",
+    "step1.loc": "Abfallverarbeitungseinheit",
     "step1.title": "Sammlung & Sortierung",
     "step1.desc": "KI-gestützte Materialintelligenz identifiziert und sortiert Abfallstoffe für maximale Qualität und Effizienz",
     "step2.loc": "KI-Qualitätslabor",
@@ -529,7 +529,7 @@ export const translations: Record<"en" | "de", Record<string, string>> = {
     // Impact Page
     "impactpage.badge": "Rückverfolgbarkeit & Kreislaufwirtschaft",
     "impactpage.title": "Unsere ESG-Wirkung",
-    "impactpage.subtitle": "Von lokaler Abfallvermeidung in Jharkhand & UP bis hin zu verifizierten globalen ESG-Fußabdrücken. Entdecken Sie unser zirkuläres Paradigma.",
+    "impactpage.subtitle": "Von lokaler Abfallvermeidung in UP bis hin zu verifizierten globalen ESG-Fußabdrücken. Entdecken Sie unser zirkuläres Paradigma.",
     "impactpage.loop.title": "Unser Zero-Waste-Kreislauf",
     "impactpage.loop.desc": "EkoKintsugi leitet Textilabfälle, Kunststoffabfälle und Schuhreste von überlaufenden Mülldeponien direkt in unsere leistungsstarke Material-Pipeline um.",
     "impactpage.loop.item1": "• 100% rückverfolgbare Beschaffung",
