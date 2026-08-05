@@ -33,6 +33,12 @@ export default function PrebookingButton() {
   const [error, setError] = useState<string | null>(null);
   const [form, setForm] = useState({ name: "", phone: "", email: "", product: "", notes: "" });
 
+    useEffect(() => {
+    const openFromEvent = () => setIsOpen(true);
+    window.addEventListener("ekokintsugi:open-prebooking", openFromEvent);
+    return () => window.removeEventListener("ekokintsugi:open-prebooking", openFromEvent);
+  }, []);
+
   const close = () => {
     setIsOpen(false);
     setIsSubmitted(false);
