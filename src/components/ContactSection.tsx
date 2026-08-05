@@ -25,7 +25,7 @@ export default function ContactSection() {
 
           <div className="flex-1 relative z-10 space-y-8 md:space-y-12">
             <div>
-              <h3 className="text-2xl sm:text-3xl md:text-4xl font-serif font-bold mb-4 sm:mb-6">{t("contactsection.together")}</h3>
+              <h3 className="text-xl sm:text-2xl font-serif font-bold mb-4 sm:mb-6">{t("contactsection.together")}</h3>
               <p className="text-sm sm:text-base opacity-80 italic">{t("contactsection.invite")}</p>
             </div>
 
