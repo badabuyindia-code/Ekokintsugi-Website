@@ -27,7 +27,7 @@ export default function ProcessPage() {
           >
             <div className="absolute top-0 right-0 w-64 h-64 bg-primary/5 rounded-full blur-3xl -mr-32 -mt-32 transition-transform duration-700 group-hover:scale-125 group-hover:bg-primary/10" />
             <MapPin className="text-accent w-10 h-10 mb-6 transition-transform duration-500 group-hover:scale-110 group-hover:rotate-12" />
-            <h3 className="text-2xl sm:text-3xl font-serif font-bold mb-2">Jharkhand</h3>
+            <h3 className="text-2xl sm:text-3xl font-serif font-bold mb-2">Waste Processing</h3>
             <p className="text-accent font-mono text-xs font-bold tracking-widest uppercase mb-8">Processing & Recycling</p>
             
             <ul className="space-y-4 font-sans text-muted-foreground text-sm flex flex-col gap-2">
