@@ -25,7 +25,7 @@ export default function Navbar({ onImpactClick }: { onImpactClick: () => void })
   ];
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 navbar-premium">
+    <header className="fixed top-9 left-0 right-0 z-50 navbar-premium">
       <div className="max-w-7xl mx-auto px-6 py-2.5 flex justify-between items-center relative">
         {/* Left Side: Brand Logo (Fully visible and uncrowded on mobile) */}
         <Link to="/" className="flex items-center group z-50">
