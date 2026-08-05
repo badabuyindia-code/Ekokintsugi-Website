@@ -59,11 +59,12 @@ function AppShell() {
 
   return (
     <>
-      <ScrollToTop />
-      <div className="min-h-screen surface-gradient text-foreground selection:bg-accent selection:text-accent-foreground flex flex-col">
-        <Navbar onImpactClick={openImpactDashboard} />
+     <ScrollToTop />
+<PrebookingBanner />
+<div className="min-h-screen surface-gradient text-foreground selection:bg-accent selection:text-accent-foreground flex flex-col">
+  <Navbar onImpactClick={openImpactDashboard} />
 
-        <main className="pt-20 flex-grow">
+  <main className="pt-[7.25rem] flex-grow">
           <Routes>
             <Route path="/" element={<LandingPage />} />
             <Route path="/about" element={<AboutPage />} />
