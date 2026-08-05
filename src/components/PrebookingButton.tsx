@@ -1,4 +1,4 @@
-import { useState, type FormEvent } from "react";
+import { useEffect, useState, type FormEvent } from "react";
 import { supabase, isSupabaseConfigured } from "../lib/supabase";
 
 function CalendarIcon({ className }: { className?: string }) {
