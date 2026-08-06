@@ -23,7 +23,7 @@ export default function Navbar({ onImpactClick }: { onImpactClick: () => void })
     { name: t("nav.impact"), path: '/impact' },
     { name: "Media & Press", path: '/press' },
     { name: t("nav.contact"), path: '/contact' },
-    { name: t("nav.contact"), path: '/contact' },
+  
   ];
 
   return (
