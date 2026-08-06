@@ -75,7 +75,7 @@ export default function ProductCatalogueGrid({
 
             <div className="p-6 flex-grow flex flex-col">
               <p className="text-[10px] font-mono tracking-widest text-accent uppercase font-bold mb-2">
-                {item.category || "Product"}
+                {(item.category || "Product").split(",")[0].trim()}
               </p>
               <h3 className="font-serif text-xl text-primary font-bold mb-3">{item.name}</h3>
               <p className="text-sm text-muted-foreground italic flex-grow mb-4">
