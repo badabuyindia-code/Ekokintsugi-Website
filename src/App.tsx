@@ -24,6 +24,7 @@ import PrebookingButton from "./components/PrebookingButton";
 import ProductDetailPage from "./pages/ProductDetailPage";
 import AccountPage from "./pages/AccountPage";
 import PrebookingBanner from "./components/PrebookingBanner";
+import PressPage from "./pages/PressPage";
 
 function AppShell() {
   const location = useLocation();
@@ -72,6 +73,7 @@ function AppShell() {
             <Route path="/products/category/:slug" element={<ProductCategoryPage />} />
             <Route path="/process" element={<ProcessPage />} />
             <Route path="/impact" element={<ImpactPage />} />
+            <Route path="/press" element={<PressPage />} />
             <Route path="/contact" element={<ContactPage />} />
             <Route path="/auth" element={<AuthPage />} />
             <Route path="/account" element={<AccountPage />} />
