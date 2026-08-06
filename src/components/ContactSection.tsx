@@ -73,7 +73,7 @@ export default function ContactSection() {
                 <Phone className="text-accent w-5 h-5 shrink-0" />
                 <div>
                   <p className="text-[10px] font-mono tracking-widest text-muted-foreground">{t("contact.speak").toUpperCase()}</p>
-                  <p className="font-bold text-primary text-sm sm:text-base">+91 9359546639</p>
+                  <p className="font-bold text-primary text-sm sm:text-base">+91 8679573322</p>
                 </div>
               </div>
 
