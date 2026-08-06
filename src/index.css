@@ -136,10 +136,10 @@
 }
 
 .navbar-premium {
-  background: rgba(27, 67, 50, 0.95) !important;
-  backdrop-filter: blur(16px);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.15) !important;
+  background: rgba(247, 249, 248, 0.92) !important;
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid #E5EAE7 !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05) !important;
 }
 
 .dark .navbar-premium {
@@ -155,12 +155,12 @@
 
 /* Premium Navigation Links */
 .navbar-premium .nav-link-premium {
-  color: rgba(255, 255, 255, 0.9) !important;
+  color: #15352E !important;
   font-weight: 700 !important;
 }
 
 .navbar-premium .nav-link-premium:hover {
-  color: #dfb15b !important;
+  color: #8FE3DB !important;
 }
 
 /* Integrated Preferences Pill (Theme + Language) */
