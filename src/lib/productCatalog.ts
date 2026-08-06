@@ -139,11 +139,15 @@ export function getCategoryFromQuery(query: string | null | undefined) {
 }
 
 export function productBelongsToCategory(product: CatalogProduct, category: ProductCategory) {
-  const normalizedCategory = normalizeText(product.category);
+  const rawCategories = (product.category ?? "").split(",").map((c) => c.trim()).filter(Boolean);
+  const normalizedCategories = rawCategories.map(normalizeText);
   const haystack = normalizeText([product.category, product.name, product.description].filter(Boolean).join(" "));
 
-  if (normalizedCategory) {
-    return category.categoryLabels.some((label) => normalizedCategory === normalizeText(label));
+  if (normalizedCategories.length > 0) {
+    return category.categoryLabels.some((label) => {
+      const normalizedLabel = normalizeText(label);
+      return normalizedCategories.some((c) => c === normalizedLabel);
+    });
   }
 
   return category.queryTerms.some((term) => haystack.includes(normalizeText(term)));
