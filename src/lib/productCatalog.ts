@@ -98,7 +98,7 @@ export const PRODUCT_CATEGORIES: ProductCategory[] = [
   shortTitle: "Key Chain",
   eyebrow: "Artisanal Accents",
   description: "Premium handcrafted key chains made from circular leather.",
-    image: "https://adykwrunnuwgwmbzfsxj.supabase.co/storage/v1/object/public/product-images/Ekokintsugi-Products_categorywise/CLUTCHES/1.png",
+    image: "https://adykwrunnuwgwmbzfsxj.supabase.co/storage/v1/object/public/product-images/Ekokintsugi-Products_categorywise/KEYCHAINS/1.png",
     categoryLabels: ["accessories", "accessory", "clutches", "clutch", "keychains", "keychain", "accessories & small goods"],
     queryTerms: ["accessory", "accessories", "clutch", "clutches", "keychain", "keychains", "luggage tag", "charm", "fob"]
   }
