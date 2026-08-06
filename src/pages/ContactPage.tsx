@@ -133,7 +133,7 @@ export default function ContactPage() {
                     </div>
                     <div>
                       <p className="text-[10px] font-mono tracking-[0.3em] uppercase font-black text-accent mb-1.5 sm:mb-2">{t("contact.speak")}</p>
-                      <a href="tel:+919359546639" className="text-xl sm:text-2xl font-serif hover:text-accent transition-colors">+91 93595 46639</a>
+                      <a href="tel:+918679573322" className="text-xl sm:text-2xl font-serif hover:text-accent transition-colors">+91 86795 73322</a>
                     </div>
                   </div>
                   <div className="flex items-center gap-4 sm:gap-8">
